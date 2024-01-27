@@ -36,5 +36,6 @@ Route::post('/reregister', function () {
 }); 
 
 Route::get('/', function () {
-    return view('quiz');
+    return view('login');
+    // return view('quiz');
 });
