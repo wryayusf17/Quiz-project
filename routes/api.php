@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\ctrl_user;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\User\ctrl_user;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::post('/login', [ctrl_user::class, 'login']);
+Route::post('/register',[ctrl_user::class, 'register']);
+Route::group(['middleware'=>['auth:sanctum']],function(){
+   
+    Route::post('/logout',[ctrl_user::class, 'logout']);
+});
+
+// Route::get('/login', function () {
+//     return view('login');
+// });
+
+Route::get('/welcome', function () {
     return view('welcome');
+}); 
+
+
+
+Route::post('/reregister', function () {
+    return view('signup');
+}); 
+
+Route::get('/', function () {
+    return view('quiz');
 });
