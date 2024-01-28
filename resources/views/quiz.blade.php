@@ -331,8 +331,7 @@
 
 
     logoutbtn.addEventListener("click", function() {
-      // Add your logout functionality here
-      alert("Logout clicked!");
+      window.location = "http://127.0.0.1:8000/";
     });
 
     document.body.appendChild(logoutbtn);
