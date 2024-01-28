@@ -14,7 +14,7 @@
 <body>
   <div class="container">
     <div class="start-screen">
-      <h1 class="heading">• • • Quiz • • •sdf</h1>
+      <h1 class="heading">• • • Quiz • • •</h1>
       <div class="settings">
         <label for="num-questions">Number of Questions:</label>
         <select id="num-questions">
@@ -64,7 +64,7 @@
           <option value="60">60 seconds</option>
         </select>
       </div>
-      <button  id="btnstart" class="btn start">Start Quiz</button>
+      <button id="btnstart" class="btn start">Start Quiz</button>
     </div>
     <div class="quiz hide">
       <div class="timer">
@@ -198,7 +198,7 @@
 
   const startTimer = (time) => {
     timer = setInterval(() => {
-     
+
       if (time >= 0) {
         progress(time);
         time--;
@@ -220,7 +220,7 @@
   };
 
 
-    // check answer btn
+  // check answer btn
   const submitBtn = document.querySelector(".submit"),
     nextBtn = document.querySelector(".next");
   submitBtn.addEventListener("click", () => {
@@ -301,7 +301,62 @@
     window.location.reload();
   });
 
-  
+
+  // logout
+
+  // function showlogoutbtn() {
+  //   var logoutbtn = document.createElement("div");
+  //   logoutbtn.innerHTML =
+  //     "Logout";
+  //   logoutbtn.style.position = "absolute";
+  //   logoutbtn.style.top = "0";
+  //   logoutbtn.style.right = "0";
+  //   logoutbtn.style.fontSize = "10px";
+  //   logoutbtn.style.color = "#ccc";
+  //   logoutbtn.style.fontFamily = "sans-serif";
+  //   logoutbtn.style.margin = "15px";
+  //   logoutbtn.style.padding = "5px";
+  //   logoutbtn.style.background = "red";
+  //   logoutbtn.style.borderTopLeftRadius = "5px";
+  //   logoutbtn.style.borderRadius = "5px";
+  //   logoutbtn.style.width = "100px";
+  //   logoutbtn.style.height = "50px";
+  //   logoutbtn.style.borderRadius = "5px";
+  //   // logoutbtn.style.alignContent = "center";
+  //   logoutbtn.style.alignContent = "center";
+  //   logoutbtn.style.textAlign = "center"; // Center the text
+  //   logoutbtn.style.display = "flex";
+  //   // logoutbtn.style.alignItems = "censter";
+  //   logoutbtn.style.boxShadow = "0 0 5px #ccc";
+  //   document.body.appendChild(logoutbtn);
+  // }
+  function showlogoutbtn() {
+    var logoutbtn = document.createElement("div");
+    logoutbtn.innerHTML = "Logout";
+    logoutbtn.style.position = "absolute";
+    logoutbtn.style.top = "0";
+    logoutbtn.style.right = "0";
+    logoutbtn.style.fontSize = "20px";
+    logoutbtn.style.color = "#ccc";
+    logoutbtn.style.fontFamily = "sans-serif";
+    logoutbtn.style.margin = "15px";
+    logoutbtn.style.padding = "5px";
+    logoutbtn.style.paddingLeft = "20px";
+    logoutbtn.style.background = "red";
+    logoutbtn.style.borderTopLeftRadius = "5px";
+    logoutbtn.style.borderRadius = "5px";
+    logoutbtn.style.width = "100px";
+    logoutbtn.style.height = "50px";
+    logoutbtn.style.borderRadius = "5px";
+    logoutbtn.style.display = "flex"; // Center vertically
+    logoutbtn.style.alignItems = "center"; // Center vertically
+    logoutbtn.style.textAlign = "center"; // Center horizontally
+
+    logoutbtn.style.boxShadow = "0 0 5px #ccc";
+    document.body.appendChild(logoutbtn);
+  }
+
+  showlogoutbtn();
 </script>
 
 <style>
