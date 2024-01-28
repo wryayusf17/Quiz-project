@@ -64,7 +64,7 @@
           <option value="60">60 seconds</option>
         </select>
       </div>
-      <button type="submit" onclick="showQuiz()" id="btnstart" class="btn start">Start Quiz</button>
+      <button  id="btnstart" class="btn start">Start Quiz</button>
     </div>
     <div class="quiz hide">
       <div class="timer">
@@ -148,7 +148,7 @@
         }, 1000);
       });
   };
-
+  // start event
   startBtn.addEventListener("click", startQuiz);
 
   const showQuestion = (question) => {
@@ -198,9 +198,7 @@
 
   const startTimer = (time) => {
     timer = setInterval(() => {
-      if (time === 3) {
-        playAdudio("countdown.mp3");
-      }
+     
       if (time >= 0) {
         progress(time);
         time--;
@@ -221,12 +219,15 @@
     }, 500);
   };
 
+
+    // check answer btn
   const submitBtn = document.querySelector(".submit"),
     nextBtn = document.querySelector(".next");
   submitBtn.addEventListener("click", () => {
     checkAnswer();
   });
 
+  // next question btn
   nextBtn.addEventListener("click", () => {
     nextQuestion();
     submitBtn.style.display = "block";
@@ -300,10 +301,7 @@
     window.location.reload();
   });
 
-  const playAdudio = (src) => {
-    const audio = new Audio(src);
-    audio.play();
-  };
+  
 </script>
 
 <style>
