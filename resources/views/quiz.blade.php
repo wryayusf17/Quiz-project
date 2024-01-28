@@ -24,7 +24,7 @@
     font-size: 20px;
     color: #ccc;
     margin: 15px;
-    padding: 5px 20px;
+    padding-left: 15px ;
     background: red;
     border-top-left-radius: 5px;
     border-radius: 5px;
@@ -35,6 +35,7 @@
     text-align: center;
     box-shadow: 0 0 5px #ccc;
     cursor: pointer;
+    border-color: transparent;
 }
 
 </style>
