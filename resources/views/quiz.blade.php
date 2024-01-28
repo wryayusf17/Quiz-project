@@ -304,32 +304,6 @@
 
   // logout
 
-  // function showlogoutbtn() {
-  //   var logoutbtn = document.createElement("div");
-  //   logoutbtn.innerHTML =
-  //     "Logout";
-  //   logoutbtn.style.position = "absolute";
-  //   logoutbtn.style.top = "0";
-  //   logoutbtn.style.right = "0";
-  //   logoutbtn.style.fontSize = "10px";
-  //   logoutbtn.style.color = "#ccc";
-  //   logoutbtn.style.fontFamily = "sans-serif";
-  //   logoutbtn.style.margin = "15px";
-  //   logoutbtn.style.padding = "5px";
-  //   logoutbtn.style.background = "red";
-  //   logoutbtn.style.borderTopLeftRadius = "5px";
-  //   logoutbtn.style.borderRadius = "5px";
-  //   logoutbtn.style.width = "100px";
-  //   logoutbtn.style.height = "50px";
-  //   logoutbtn.style.borderRadius = "5px";
-  //   // logoutbtn.style.alignContent = "center";
-  //   logoutbtn.style.alignContent = "center";
-  //   logoutbtn.style.textAlign = "center"; // Center the text
-  //   logoutbtn.style.display = "flex";
-  //   // logoutbtn.style.alignItems = "censter";
-  //   logoutbtn.style.boxShadow = "0 0 5px #ccc";
-  //   document.body.appendChild(logoutbtn);
-  // }
   function showlogoutbtn() {
     var logoutbtn = document.createElement("div");
     logoutbtn.innerHTML = "Logout";
@@ -352,7 +326,15 @@
     logoutbtn.style.alignItems = "center"; // Center vertically
     logoutbtn.style.textAlign = "center"; // Center horizontally
 
+
     logoutbtn.style.boxShadow = "0 0 5px #ccc";
+
+
+    logoutbtn.addEventListener("click", function() {
+      // Add your logout functionality here
+      alert("Logout clicked!");
+    });
+
     document.body.appendChild(logoutbtn);
   }
 
