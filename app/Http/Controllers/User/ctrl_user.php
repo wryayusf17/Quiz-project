@@ -36,9 +36,7 @@ class ctrl_user extends Controller
     }
 
     
-    public function reregister(){
-        redirect('/reregister');
-    }
+    
     public function register(Request $request){
         $validator = Validator::make($request->all(),[
             'email'=>'required|email|unique:users,email',
@@ -55,12 +53,6 @@ class ctrl_user extends Controller
         }else{
             return response()->json(['errors'=>$validator->errors()->all()],401);
         }
-    }
-
-    public function logout(Request $request){
-        
-         $request->user()->tokens()->delete();
-         return response()->json(['success'=> 'logged out successfully'],200);
     }
 
 

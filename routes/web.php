@@ -45,3 +45,4 @@ Route::get('/', function () {
 Route::get('/quiz', function () {
     return view('quiz');
 });
+

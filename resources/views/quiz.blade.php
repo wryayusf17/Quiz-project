@@ -8,10 +8,40 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css" />
   <title>Quiz</title>
-
+  
 </head>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
 
+.logout-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 20px;
+    color: #ccc;
+    margin: 15px;
+    padding: 5px 20px;
+    background: red;
+    border-top-left-radius: 5px;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 0 5px #ccc;
+    cursor: pointer;
+}
+
+</style>
 <body>
+  <form id="logoutForm" action="/" method="get">
+    <button type="submit" class="logout-btn">Logout</button>
+</form>
   <div class="container">
     <div class="start-screen">
       <h1 class="heading">• • • Quiz • • •</h1>
@@ -301,42 +331,6 @@
     window.location.reload();
   });
 
-
-  // logout
-
-  function showlogoutbtn() {
-    var logoutbtn = document.createElement("div");
-    logoutbtn.innerHTML = "Logout";
-    logoutbtn.style.position = "absolute";
-    logoutbtn.style.top = "0";
-    logoutbtn.style.right = "0";
-    logoutbtn.style.fontSize = "20px";
-    logoutbtn.style.color = "#ccc";
-    logoutbtn.style.fontFamily = "sans-serif";
-    logoutbtn.style.margin = "15px";
-    logoutbtn.style.padding = "5px";
-    logoutbtn.style.paddingLeft = "20px";
-    logoutbtn.style.background = "red";
-    logoutbtn.style.borderTopLeftRadius = "5px";
-    logoutbtn.style.borderRadius = "5px";
-    logoutbtn.style.width = "100px";
-    logoutbtn.style.height = "50px";
-    logoutbtn.style.borderRadius = "5px";
-    logoutbtn.style.display = "flex"; // Center vertically
-    logoutbtn.style.alignItems = "center"; // Center vertically
-    logoutbtn.style.textAlign = "center"; // Center horizontally
-
-
-    logoutbtn.style.boxShadow = "0 0 5px #ccc";
-
-
-    logoutbtn.addEventListener("click", function() {
-      // Add your logout functionality here
-      alert("Logout clicked!");
-    });
-
-    document.body.appendChild(logoutbtn);
-  }
 
   showlogoutbtn();
 </script>
