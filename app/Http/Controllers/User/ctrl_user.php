@@ -21,7 +21,7 @@ class ctrl_user extends Controller
             if(Hash::check($request->password, $user->password)){   
                
         $user->tokens()->delete();
-        return redirect('/welcome');
+        return redirect('/quiz');
                 
             }else{
                 return response()->json(['errors'=>['password is incorect']],401);
@@ -51,7 +51,7 @@ class ctrl_user extends Controller
                 'email' => $request->email,
                 'password' => Hash::make($request->password)
             ]);
-            return redirect('/welcome');
+            return redirect('/quiz');
         }else{
             return response()->json(['errors'=>$validator->errors()->all()],401);
         }

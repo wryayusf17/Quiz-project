@@ -39,3 +39,7 @@ Route::get('/', function () {
     return view('login');
     // return view('quiz');
 });
+
+Route::get('/quiz', function () {
+    return view('quiz');
+});
