@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::post('/login', [ctrl_user::class, 'login']);
-Route::post('/register',[ctrl_user::class, 'register']);
 // Route::group(['middleware'=>['auth:sanctum']],function(){
    
 //     Route::post('/logout',[ctrl_user::class, 'logout']);
@@ -24,6 +21,12 @@ Route::post('/register',[ctrl_user::class, 'register']);
 // Route::get('/login', function () {
 //     return view('login');
 // });
+
+
+
+Route::post('/login', [ctrl_user::class, 'login']);
+Route::post('/register',[ctrl_user::class, 'register']);
+
 
 Route::get('/welcome', function () {
     return view('welcome');
@@ -37,7 +40,6 @@ Route::post('/reregister', function () {
 
 Route::get('/', function () {
     return view('login');
-    // return view('quiz');
 });
 
 Route::get('/quiz', function () {
