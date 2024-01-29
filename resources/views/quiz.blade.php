@@ -155,9 +155,9 @@
   const startQuiz = () => {
     const num = numQuestions.value,
       cat = category.value,
-      diff = difficulty.value;
+      difficulty = difficulty.value;
     loadingAnimation();
-    const url = `https://opentdb.com/api.php?amount=${num}&category=${cat}&difficulty=${diff}&type=multiple`;
+    const url = `https://opentdb.com/api.php?amount=${num}&category=${cat}&difficulty=${difficulty}&type=boolean`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -170,6 +170,8 @@
         }, 1000);
       });
   };
+
+  
   // start event
   startBtn.addEventListener("click", startQuiz);
 
